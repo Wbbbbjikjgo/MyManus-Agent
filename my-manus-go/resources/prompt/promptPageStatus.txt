@@ -1,0 +1,14 @@
+[任务历史记忆到此结束]
+[当前状态信息从此处开始]
+下面的信息是一次性的 - 如果你需要记录任何内容请将其保存在memory字段中
+# 当前浏览器tab地址
+{url}
+# 当前浏览器全部tab信息
+{pageListInfo}
+# 含有可交互元素的页面信息
+{pageData}
+{scrollData}
+# 步骤信息
+{stepData}
+# 时间信息
+{dateTime}

@@ -1,0 +1,19 @@
+server:
+  port: 18081
+
+agent-model:
+  base-url: https://api.deepseek.com/v1
+  api-key: sk-c58bf64b03464706bedda52fb3c1e079
+  model-name: deepseek-chat
+  completions-path: /chat/completions
+  stream: false
+
+plan-model:
+  base-url: https://api.deepseek.com/v1
+  api-key: sk-c58bf64b03464706bedda52fb3c1e079
+  model-name: deepseek-reasoner
+  completions-path: /chat/completions
+
+file:
+  base: ./file/   # Java 原为 F:\\tmp\\my-manus\\，改为相对路径便于本地运行
+  domain: http://localhost:18081

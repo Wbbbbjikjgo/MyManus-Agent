@@ -1,0 +1,55 @@
+{
+  "name": "AgentOutput",
+  "description": "main output method",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "current_state": {
+        "type": "object",
+        "properties": {
+          "evaluation_previous_goal": {
+            "type": "string"
+          },
+          "memory": {
+            "type": "string"
+          },
+          "thinking": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "evaluation_previous_goal",
+          "memory",
+          "thinking"
+        ]
+      },
+      "action": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "done": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean"
+                },
+                "text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "success",
+                "text"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "current_state",
+      "action"
+    ]
+  }
+}

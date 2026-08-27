@@ -1,0 +1,10 @@
+# 编译产物
+/my-manus-go
+/my-manus-go.exe
+*.exe
+*.exe~
+*.test
+*.out
+
+# 运行时生成的文件目录（对应 file.base）
+/file/
