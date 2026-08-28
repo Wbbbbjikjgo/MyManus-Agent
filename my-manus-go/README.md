@@ -13,7 +13,7 @@ my-manus-go/
 │   ├── enum/agent_type.go      # 6 个 Agent 枚举（对应 AgentTypeEnum.java）
 │   ├── util/json_finder.go     # 提取首个合法 JSON（对应 JsonFinder.java）
 │   ├── model/                  # 消息 + AgentOutput 结构体
-│   ├── ai/client.go            # Eino OpenAI ChatModel 工厂
+│   ├── ai/client.go            # DeepSeek OpenAI 兼容 HTTP 客户端
 │   ├── prompt/prompt.go        # 提示词加载 + 占位符填充
 │   ├── stomp/stomp.go          # STOMP 子协议编解码
 │   ├── handler/websocket_handler.go  # WebSocket + STOMP 端点（前端契约）
@@ -24,7 +24,7 @@ my-manus-go/
 ## 前置条件
 
 - Go 1.22+
-- 环境变量 `VOLCES_API_KEY`（火山方舟 API Key，用于调用 deepseek 模型）
+- API Key 已配置在 `resources/application.yaml`（DeepSeek）
 - 浏览器 Agent 需要本机安装 Chrome/Chromium
 
 ## 构建与运行
@@ -39,7 +39,6 @@ go mod tidy
 go build -o my-manus-go.exe .
 
 # 运行（监听 18081）
-$env:VOLCES_API_KEY="你的key"
 .\my-manus-go.exe
 ```
 
